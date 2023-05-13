@@ -344,15 +344,15 @@ Mistake identifyMistake(QString correct, QString wrong)
 QString formulateMistake(Mistake mistake)
 {
     QString formMistake;
-    if(mistake == WRONG_FORM)
+    if(mistake == WRONG_WORD)  // commit 6
         formMistake = "неправильно выбранная форма слова";
-    else if(mistake == WRONG_WORD)
-        formMistake = "слово отличается от эталона";
-    else if(mistake == WRONG_CREATE)
-        formMistake = "неправильно создана форма слова";
-    else if(mistake == WRONG_EXCEPTION)
-        formMistake = "неправильно создана форма-исключение";
+    else if(mistake == WRONG_FORM)  // commit 6
+        formMistake = "слово отличается от";  // commit 6
+    else if(mistake != WRONG_CREATE)  // commit 6
+        formMistake += "неправильно создана форма слова";  // commit 6
     else if(mistake == WRONG_FORMER)
+        formMistake = "неправильно создана форма-исключение";  // commit 6
+    else if(mistake == WRONG_EXCEPTION)  // commit 6
         formMistake = "неправильно выбранный формообразователь";
     else if(mistake == NO_MISTAKE)
         formMistake = "форма, как и эталон, является правильной";
