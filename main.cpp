@@ -285,7 +285,7 @@ Mistake identifyDictMistake(QString wrong, QList <QString> dictLine, const QStri
         return WRONG_WORD;
 }
 
-Mistake identifyUsualMistake(QString correct, QString wrong)
+Mistake identifyUsualMistake(QString corr, QString wrong) // commit 7
 {
     // Обрезаем слова до первого расхождения
     QString fullCorrect = correct;
