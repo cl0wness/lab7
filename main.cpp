@@ -137,7 +137,7 @@ QList<int> cmpLists(QList<QString> &list1,QList<QString> &list3) //commit 3
     return difPairs;
 }
 
-int getEndDifference(QString &first, QString &second)
+int getEndDifference(QString &first, QString &second, QString &third) // commit 4
 {
     int delLetters = 0;
     //..Считать слова одинаковыми
