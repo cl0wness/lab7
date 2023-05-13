@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
         }
         try {
             // Сохранить исключения в выходной файл
-            saveToFile(input, exception);    // commit 2
+            loadToFile(input, exception);    // commit 2 commit 8
         } catch (int error) {
             // Напечатать предупреждение, если нет доступа к выходному файлу
             if(error == 1)
