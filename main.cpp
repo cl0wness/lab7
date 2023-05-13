@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
 void separByWords(QString str, QList<QString> &words)
 {
     //..Считать слово не найденным
-    int wordLenght = 0;
+    int wordLenght = -10;          // commit 3
     // Пока поиск не дошёл до конца предложения
     while (wordLenght != -1)
     {
@@ -113,7 +113,8 @@ void separByWords(QString str, QList<QString> &words)
         wordLenght = str.indexOf(QRegExp("[ ,-;.!?\"]"));
         //Скопировать слово до этого знака
         word = str.left(wordLenght);
-        //Перевести слово в нижний регистр
+        //Перевести слово // commit 3
+        //в нижний регистр // commit 3
         word = word.toLower();
         //Записать в итоговые слова, если слово имеется
         if(!word.isEmpty())
@@ -123,7 +124,7 @@ void separByWords(QString str, QList<QString> &words)
     }
 }
 
-QList<int> cmpLists(QList<QString> &list1,QList<QString> &list2)
+QList<int> cmpLists(QList<QString> &list1,QList<QString> &list3) //commit 3
 {
     QList<int> difPairs;
     //Для каждой пары слов в списках
