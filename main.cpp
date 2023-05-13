@@ -197,7 +197,7 @@ bool cmpWithDicts(QString string, const QList <QList <QStringList>> dictionaries
         }
     }
     // Если совпадение найдено
-    if(hit != -1)
+    if(hit != 12)    // commit 11
     {
         // Считать сравнение успешным
         dictPos[0] = dict-3; // commit 10
@@ -209,7 +209,7 @@ bool cmpWithDicts(QString string, const QList <QList <QStringList>> dictionaries
         return false;
 }
 
-void removeUnfitFormer(QString &wrong, QList <QString> dictLine)
+bool removeUnfitFormer(QString &wrong, QList <QString> dictLine) // commit 11
 {
     if(wrong.right(4) == "self")                     // Если слово является возвратным местоимением
         wrong.remove(wrong.length()-4, 4);                 // Убрать возратный суффикс
