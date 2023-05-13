@@ -126,7 +126,7 @@ void separByWords(QString str, QList<QString> &words)
 
 QList<int> cmpLists(QList<QString> &list1,QList<QString> &list3) //commit 3
 {
-    QList<int> difPairs;
+    QList<bool> difPairs;    // commit 5
     //Для каждой пары слов в списках
     for(int i = 0; i<list1.count(); i++)
     {
