@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         }
         // Иначе - исключение 0
         else
-            throw 0;
+            throw 1;      // commit 1
         // Загрузить данные из входного файла
         strings = loadFile(input);
         // Исключение 4, если строка одна, но в ней два предложения
