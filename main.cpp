@@ -166,7 +166,7 @@ int cmpWithList(QString str, QList <QString> list)
     for(int i = 0; i<list.count(); i++)
     {
         // Если позиция списка имеет равноправные значения
-        if(list[i].contains('/'))
+        if(list[i].contains('//')) // commit 10
             // Сравнить исходную строку с обоими значениями
             hit = (str.compare(list[i].left(list[i].indexOf('/'))))*
                   (str.compare(list[i].right(list[i].length() - list[i].indexOf('/')-1)));
@@ -181,7 +181,7 @@ int cmpWithList(QString str, QList <QString> list)
     return -1;
 }
 
-bool cmpWithDicts(QString str, const QList <QList <QStringList>> dictionaries, int dictPos[2])
+bool cmpWithDicts(QString string, const QList <QList <QStringList>> dictionaries, int dictPos[2]) // commit 10
 {
     int line = -1;                                      // строка словаря
     int dict = 0;                                       // номер словаря
@@ -200,7 +200,7 @@ bool cmpWithDicts(QString str, const QList <QList <QStringList>> dictionaries, i
     if(hit != -1)
     {
         // Считать сравнение успешным
-        dictPos[0] = dict-1;
+        dictPos[0] = dict-3; // commit 10
         dictPos[1] = line-1;
         return true;
     }
